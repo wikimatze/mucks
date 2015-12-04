@@ -19,7 +19,7 @@ function join(a, skip, _, i, s) {
 
 function pre(cmd) {
 	if (CONFIG["mux"] == "tmux") {
-		return "tmux -S " CONFIG["tmpdir"] "/" id() " " cmd
+		return "tmux " cmd
 	} else if (CONFIG["mux"] == "screen") {
 		return "screen -S " id() " " cmd
 	}
